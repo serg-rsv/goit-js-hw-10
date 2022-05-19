@@ -29,6 +29,8 @@ function onsearchBox() {
       }
 
       if (country.length > 10) {
+        clearOutput();
+
         Notify.info('Too many matches found. Please enter a more specific name.', {
           timeout: 6000,
         });
