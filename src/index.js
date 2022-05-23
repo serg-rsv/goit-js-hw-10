@@ -1,6 +1,6 @@
 import './css/styles.css';
 import fetchCountries from './fetchCountries';
-import { debounce, trim } from 'lodash';
+import { debounce } from 'lodash';
 import { Notify } from 'notiflix';
 
 const DEBOUNCE_DELAY = 300;
@@ -11,10 +11,10 @@ const refs = {
   countryInfo: document.querySelector('.country-info'),
 };
 
-refs.searchBox.addEventListener('input', debounce(onsearchBox, DEBOUNCE_DELAY));
+refs.searchBox.addEventListener('input', debounce(onSearchBox, DEBOUNCE_DELAY));
 
-function onsearchBox() {
-  const countryName = trim(refs.searchBox.value);
+function onSearchBox(e) {
+  const countryName = e.target.value.trim();
 
   if (countryName === '') {
     clearOutput();
