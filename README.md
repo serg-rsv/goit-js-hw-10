@@ -1,4 +1,5 @@
 # goit-js-hw-10
+Взаимодействие с backend.
 
 ## [Gh-page](https://serg-rsv.github.io/goit-js-hw-10)
 
